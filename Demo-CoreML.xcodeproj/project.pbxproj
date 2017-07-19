@@ -27,7 +27,7 @@
 		B809F4541F1AA62A00ABE165 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B809F45A1F1AABBA00ABE165 /* CrimeDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrimeDataSource.swift; sourceTree = "<group>"; };
 		B809F45C1F1AAD1E00ABE165 /* RoomsDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomsDataSource.swift; sourceTree = "<group>"; };
-		B809F45E1F1AC35700ABE165 /* BostonPricer.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = BostonPricer.mlmodel; path = ../../BostonPricer.mlmodel; sourceTree = "<group>"; };
+		B809F45E1F1AC35700ABE165 /* BostonPricer.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = BostonPricer.mlmodel; path = ../BostonPricer.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -281,7 +281,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 6D25T8PN9Z;
+				DEVELOPMENT_TEAM = 4DN5KQR8W8;
 				INFOPLIST_FILE = "Demo-CoreML/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "spprichard.Demo-CoreML";
@@ -295,7 +295,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 6D25T8PN9Z;
+				DEVELOPMENT_TEAM = 4DN5KQR8W8;
 				INFOPLIST_FILE = "Demo-CoreML/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "spprichard.Demo-CoreML";
@@ -324,6 +324,7 @@
 				B809F4591F1AA62A00ABE165 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

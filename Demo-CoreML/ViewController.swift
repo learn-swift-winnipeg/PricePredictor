@@ -13,13 +13,7 @@ class ViewController: UIViewController {
     let roomsDataSource = RoomsDataSource()
     let crimeDataSource = CrimeDateSource()
     
-    @IBOutlet weak var picker: UIPickerView!{
-        didSet{
-            picker.selectRow(4, inComponent: Predictor.crime.rawValue, animated: false)
-            picker.selectRow(3, inComponent: Predictor.rooms.rawValue, animated: false)
-        }
-    }
-    
+    @IBOutlet weak var picker: UIPickerView!
     @IBOutlet weak var priceLabel: UILabel!
     
     let priceFormatter: NumberFormatter = {
@@ -33,7 +27,11 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-         generatePrediction()
+        
+        picker.dataSource = self
+        picker.delegate = self
+        
+        generatePrediction()
     }
     
     fileprivate func generatePrediction(){
@@ -54,19 +52,17 @@ class ViewController: UIViewController {
         // Estimate price is in $1K increments (Data is from 1970s...)
         priceLabel.text = priceFormatter.string(for: modelOuput.price)
     }
-    
-    
 }
 
 extension ViewController: UIPickerViewDelegate{
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int,
                     inComponent component: Int) {
-        // Generate Prediction
+        generatePrediction()
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int,
-                    for compoenent: Int) -> String? {
-        guard let predictor = Predictor(rawValue: compoenent) else{
+                    forComponent component: Int) -> String? {
+        guard let predictor = Predictor(rawValue: component) else{
             fatalError("Could not find predictor for compenent")
         }
         switch predictor {
