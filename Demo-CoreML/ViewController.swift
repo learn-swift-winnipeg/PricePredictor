@@ -28,6 +28,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Alternatively this can be done in Main.storyboard.
         picker.dataSource = self
         picker.delegate = self
         
